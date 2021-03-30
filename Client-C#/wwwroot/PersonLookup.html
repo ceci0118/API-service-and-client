@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Person</title>	
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">	  
+	<link href="Content/css/bootstrap.min.css" rel="stylesheet">
+        <link href="Content/SiteStyles/Style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 style="text-align:center">Person Lookup</h1>
+    <br/>	
+    <div class="form-group">
+        <div class="row">
+            <label class="control-label col-md-2" for="searchString" >Find:</label>
+            <div class="col-md-6">
+                <input type="search" name="searchString" id="searchString" list="searchResults" class="form-control" placeholder="Start typing ...">
+                <datalist id="searchResults">
+                </datalist>
+            </div>
+            <div class="col-md-2">
+                <button name="btnDetails" id="btnDetails" class="btn btn-primary" >Get Details</button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="alert alert-warning col-sm-6" id="divNoPersonFound" style="display:none" >
+            <h3>No Person with the given name found!</h3>
+    </div>
+    <div class="form-group" id="divPersonFound" >
+        <hr/>
+        <div>
+            <h2 style="display:inline-block">Person</h2>
+            &nbsp;&nbsp;&nbsp;<a id="anchAddNew" href="#">Add New</a>
+        </div>
+        <br/>
+        <div class="row form-group">
+            <label for="txtName" class="control-label col-md-2">Name:</label>
+            <div class="col-md-3">
+                <input type="text" name="txtName" id="txtName"  class="form-control" readonly="readonly">
+                <input type="hidden" name="txtId" id="txtId"  class="form-control">
+            </div>
+            <label for="txtJobTitle" class="control-label col-md-1">Job Title:</label>
+            <div class="col-md-2">
+                <input type="text" name="txtJobTitle" id="txtJobTitle"  class="form-control" >
+            </div>
+        </div>
+        <div class="row form-group">
+            <label for="txtOrganization" class="control-label col-md-2">Organization:</label>
+            <div class="col-md-6">
+                <input type="text" name="txtOrganization" id="txtOrganization"  class="form-control" >
+            </div>
+        </div>
+        <div class="row form-group">
+            <label for="txtDepartment" class="control-label col-md-2">Department:</label>
+            <div class="col-md-6">
+                <input type="text" name="txtDepartment" id="txtDepartment"  class="form-control" >
+            </div>
+        </div>
+        <hr/>
+        <h2>Address</h2>
+        <br/>
+        <div class="row form-group">				
+            <label class="control-label col-md-2" for="txtStreetNumber" >Street Number:</label>
+            <div class="col-md-2">
+                    <input type="text" name="txtStreetNumber" id="txtStreetNumber"  class="form-control">
+            </div>
+            <label class="control-label col-md-2 text-right" for="txtUnitNumber" >Unit Number:</label>
+            <div class="col-md-2">
+                    <input type="text" name="txtUnitNumber" id="txtUnitNumber"  class="form-control">
+            </div>
+        </div>
+        <div class="row form-group">				
+            <label class="control-label col-md-2" for="txtStreetName" >Street Name:</label>
+            <div class="col-md-6">
+                    <input type="text" name="txtStreetName" id="txtStreetName"  class="form-control">
+            </div>
+        </div>
+        <div class="row form-group">				
+            <label class="control-label col-md-2" for="txtStreetType" >Street Type:</label>
+            <div class="col-md-2">
+                <input type="text" name="txtStreetType" id="txtStreetType"  class="form-control">
+            </div>
+            <label class="control-label col-md-2 text-right" for="txtStreetDirection" >Direction:</label>
+            <div class="col-md-2">
+                    <input type="text" name="txtStreetDirection" id="txtStreetDirection"  class="form-control" >
+            </div>
+        </div>
+        <div class="row form-group">				
+            <label class="control-label col-md-2" for="txtCity" >City:</label>
+            <div class="col-md-6">
+                <input type="text" name="txtCity" id="txtCity"  class="form-control" >
+            </div>
+        </div>
+        <div class="row form-group">				
+            <label class="control-label col-md-2" for="txtProvince" >Province:</label>
+            <div class="col-md-2">
+                <input type="text" name="txtProvince" id="txtProvince"  class="form-control" >
+            </div>
+            <label class="control-label col-md-2 text-right" for="txtPostalCode" >Postal Code:</label>
+            <div class="col-md-2">
+                <input type="text" name="txtPostalCode" id="txtPostalCode"  class="form-control">
+            </div>
+        </div>
+        <div class="row form-group">	
+            <div class="col-md-offset-2 col-md-2">
+                   <button id="btnSave" class="btn btn-primary" value="Find">Save</button>&nbsp;&nbsp;&nbsp;
+                   <button id="btnCancel" class="btn btn-primary" value="Find">Cancel</button>
+            </div>
+            <div class="col-md-6">
+                <span id="confirmation" class="alert-success" ></span>
+            </div>
+        </div>
+    </div>
+</div>
+    <script type="text/javascript" src="Scripts/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/Common.js"></script>
+    <script type="text/javascript" src="Scripts/PersonLookup.js"></script>
+</body>	
+</html>
